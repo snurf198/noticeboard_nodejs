@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title studying node js
+    body
+        h1 
+            a(href='/topic') Server Side JavaScript
+        ul
+            each topic in topics
+                li
+                    a(href='/topic/'+topic)= topic
+        article
+            form(action="/topic/update" method="post")
+                p= title
+                p
+                    input(type="hidden" name="title" value=title)
+                    textarea(name="description" placeholder="description")
+                p
+                    input(type="submit")
